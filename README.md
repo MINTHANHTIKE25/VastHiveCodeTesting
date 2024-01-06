@@ -1,8 +1,7 @@
 <h1 align="center">Scribble Hub</h1>
 <h3 align="Center">An App for writing & reading articles</h3>
 
-<p> Used the constraint layout navigation.</p>
-<p> Customize the status bar color and material colors.</p>
+<p> Used the constraint layout and navigation. Customize the status bar color and material colors.</p>
 
 |                              Home                               |                            Discover                             |
 |:---------------------------------------------------------------:|:---------------------------------------------------------------:|
