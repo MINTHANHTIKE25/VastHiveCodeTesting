@@ -117,13 +117,13 @@ fun MyAppsDesign(
                                 imageVector = Icons.Default.NotificationsNone,
                                 contentDescription = "noti",
                                 modifier = modifier.padding(end = 10.dp),
-                                tint = Color.Black
+                                tint = MaterialTheme.colorScheme.onBackground
                             )
                             Icon(
                                 imageVector = Icons.Default.BookmarkBorder,
                                 contentDescription = "BookMark",
                                 modifier = modifier.padding(end = 10.dp),
-                                tint = Color.Black
+                                tint = MaterialTheme.colorScheme.onBackground
                             )
                         }
 
@@ -133,7 +133,7 @@ fun MyAppsDesign(
                                 modifier = modifier.padding(end = 10.dp)
                                     .size(24.dp),
                                 colors = IconButtonDefaults
-                                    .iconButtonColors(contentColor = Color.Black)
+                                    .iconButtonColors(contentColor = MaterialTheme.colorScheme.onBackground)
                             ) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.three_dot__circle),

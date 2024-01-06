@@ -304,7 +304,7 @@ fun ExploreByTopicsItem(
         ) {
             Text(
                 text = exploreTopics.caption,
-                color = MaterialTheme.colorScheme.background,
+                color = Color.White,
                 modifier = modifier.padding(start = 12.dp, bottom = 12.dp)
             )
         }
@@ -337,7 +337,7 @@ fun ExploreByWriterItem(
         ) {
             Text(
                 text = exploreByWriters.caption,
-                color = MaterialTheme.colorScheme.background,
+                color = Color.White,
                 modifier = modifier.padding(start = 12.dp, bottom = 12.dp)
             )
         }
