@@ -223,7 +223,7 @@ fun DiscoverScreenDesign(
 
         LazyRow(
             contentPadding = PaddingValues(horizontal = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(18.dp),
             modifier = constraintModifier
                 .padding(start = 10.dp, top = 10.dp, bottom = 10.dp)
                 .fillMaxWidth()
@@ -258,7 +258,7 @@ fun DiscoverScreenDesign(
 
         LazyRow(
             contentPadding = PaddingValues(horizontal = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(18.dp),
             modifier = constraintModifier
                 .padding(start = 10.dp, top = 10.dp, bottom = 10.dp)
                 .fillMaxWidth()

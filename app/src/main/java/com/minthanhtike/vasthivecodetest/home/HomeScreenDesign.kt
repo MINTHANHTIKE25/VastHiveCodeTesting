@@ -2,8 +2,6 @@ package com.minthanhtike.vasthivecodetest.home
 
 import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,7 +31,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -47,8 +44,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -181,23 +176,22 @@ fun HomeScreenDesign(
                     start.linkTo(parent.start)
                     bottom.linkTo(trendLazyRow.top)
                 },
-            style = MaterialTheme.typography.headlineMedium,
+            style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold
         )
 
         var selectingTrend by remember { mutableStateOf("") }
         LazyRow(
             modifier = modifierOfConstraint
-                .padding(start = 10.dp, top = 10.dp, bottom = 10.dp, end = 16.dp)
-                .fillMaxWidth()
-                .height(210.dp)
+                .padding(start = 10.dp, top = 10.dp, bottom = 10.dp)
+                .fillMaxWidth().height(210.dp)
                 .constrainAs(trendLazyRow) {
                     top.linkTo(trendingText.bottom)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 },
             contentPadding = PaddingValues(8.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(15.dp),
             state = rememberLazyListState()
         ) {
             items(trendingData) { item ->
@@ -219,7 +213,7 @@ fun HomeScreenDesign(
         //region Recent Articles
         Text(
             text = "Recent Articles",
-            style = MaterialTheme.typography.headlineMedium,
+            style = MaterialTheme.typography.titleLarge,
             modifier = modifierOfConstraint
                 .padding(start = 16.dp)
                 .constrainAs(recentTxt) {
@@ -233,7 +227,7 @@ fun HomeScreenDesign(
         var selectingRecent by remember { mutableStateOf("") }
         LazyRow(
             modifier = modifierOfConstraint
-                .padding(start = 10.dp, top = 10.dp, bottom = 10.dp, end = 16.dp)
+                .padding(start = 10.dp, top = 10.dp, bottom = 10.dp)
                 .fillMaxWidth()
                 .height(210.dp)
                 .constrainAs(recentLazyRow) {
@@ -242,7 +236,7 @@ fun HomeScreenDesign(
                     end.linkTo(parent.end)
                 },
             contentPadding = PaddingValues(8.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(15.dp),
             state = rememberLazyListState()
         ) {
             items(trendingData) { item ->
@@ -264,7 +258,7 @@ fun HomeScreenDesign(
         //region Popular Article
         Text(
             text = "Popular Articles",
-            style = MaterialTheme.typography.headlineMedium,
+            style = MaterialTheme.typography.titleLarge,
             modifier = modifierOfConstraint
                 .padding(start = 16.dp)
                 .constrainAs(popularTxt) {
@@ -286,7 +280,7 @@ fun HomeScreenDesign(
                     start.linkTo(parent.start)
                 },
             contentPadding = PaddingValues(8.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            horizontalArrangement = Arrangement.spacedBy(15.dp),
             state = rememberLazyListState()
         ) {
             itemsIndexed(trendingData) { index,item ->
@@ -358,7 +352,7 @@ fun RowItems(
                     start.linkTo(parent.start)
                 }) {
             Icon(
-                imageVector = if (selecting ) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
+                imageVector = if (selecting) Icons.Filled.Bookmark else Icons.Outlined.BookmarkBorder,
                 contentDescription = "save",
                 tint = MaterialTheme.colorScheme.inversePrimary,
                 modifier = modifier.fillMaxSize()
